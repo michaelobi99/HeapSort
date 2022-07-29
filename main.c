@@ -42,7 +42,7 @@ void heapSort(int* arr, int s){
 
 int main()
 {
-    int SIZE = 1000;
+    int SIZE = 10000;
     srand(time(NULL));
     int* arr = (int*)calloc(SIZE, sizeof(int));
     for (int i = 0; i < SIZE; ++i)
@@ -53,5 +53,6 @@ int main()
     heapSort(arr, SIZE);
     for (int i = 0; i < SIZE; ++i)
         printf("%i ", *(arr+i));
+    free(arr);
     return 0;
 }
